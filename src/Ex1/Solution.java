@@ -1,32 +1,32 @@
 package Ex1;
+
 import java.io.FileInputStream;
 import java.util.Scanner;
 
-/* ����ϴ� Ŭ�������� Solution �̾�� �ϸ�, ������ Solution.java �� ����� ���� �����մϴ�.
-   �̷��� ��Ȳ������ �����ϰ� java Solution �������� ���α׷��� ������ �� �� �ֽ��ϴ�. */
+/* 사용하는 클래스명이 Solution 이어야 하며, 가급적 Solution.java 를 사용할 것을 권장합니다.
+   이러한 상황에서도 동일하게 java Solution 명령으로 프로그램을 수행해 볼 수 있습니다. */
 
 class Solution {
 	public static void main(String args[]) throws Exception	{
-		int T, num, value, result=0;
+		int T, num,result;
         int test_case;
-        /* �Ʒ� �޼ҵ� ȣ���� ������ ǥ�� �Է�(Ű����) ��� input.txt ���Ϸ� ���� �о���ڴٴ� �ǹ��� �ڵ��Դϴ�.
-           ���� ������ PC ���� �׽�Ʈ �� ����, �Է°��� input.txt�� ������ �� �� �ڵ带 ù �κп� �߰��ϸ�,
-           �� �Ʒ����� �Է��� ������ �� ǥ�� �Է� ��� input.txt ���Ϸ� ���� �Է°��� �о� �� �� �ֽ��ϴ�.
-           ���� ������ PC ���� �׽�Ʈ �� ������ �Ʒ� �ּ��� ����� �� �޼ҵ带 ����ϼŵ� �˴ϴ�.
-           ��, �� �ý��ۿ��� "�����ϱ�" �� ������ �ݵ�� �� �޼ҵ带 ����ų� �ּ� ó�� �ϼž� �մϴ�. */
-		Scanner sc = new Scanner(new FileInputStream("input.txt"));
-        
-//		Scanner sc = new Scanner(System.in);
+        /* 아래 메소드 호출은 앞으로 표준 입력(키보드) 대신 input.txt 파일로 부터 읽어오겠다는 의미의 코드입니다.
+           만약 본인의 PC 에서 테스트 할 때는, 입력값을 input.txt에 저장한 후 이 코드를 첫 부분에 추가하면,
+           그 아래에서 입력을 수행할 때 표준 입력 대신 input.txt 파일로 부터 입력값을 읽어 올 수 있습니다.
+           따라서 본인의 PC 에서 테스트 할 때에는 아래 주석을 지우고 이 메소드를 사용하셔도 됩니다.
+           단, 이 시스템에서 "제출하기" 할 때에는 반드시 이 메소드를 지우거나 주석 처리 하셔야 합니다. */
+		Scanner sc = new Scanner(System.in);
         
 		T = sc.nextInt();        
 		for(test_case = 1; test_case <= T; test_case++) {
-			//	�� �κп��� �˰����� ���α׷��� �ۼ��Ͻʽÿ�.
+			//	이 부분에서 알고리즘 프로그램을 작성하십시오.
+            result = 0;
 			num = sc.nextInt();
 			for(int i = 0; i < num; i++) {
 				result ^= sc.nextInt();
 			}
 			
-			//	�� �κп��� ������ ����Ͻʽÿ�.
+			//	이 부분에서 정답을 출력하십시오.
 			System.out.println("Case #" + test_case);
 			System.out.println(result);
 			
